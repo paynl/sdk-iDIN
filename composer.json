@@ -4,8 +4,8 @@
   "minimum-stability": "stable",
   "authors": [
     {
-      "name": "Andy Pieters",
-      "email": "andy@pay.nl"
+      "name": "Kevin Verschoor",
+      "email": "k.verschoor@pay.nl"
     }
   ],
   "require": {
