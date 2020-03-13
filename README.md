@@ -14,9 +14,9 @@
 ---
 
 ### About
-In order to use this SDK, you'll need to have an iDin account at Pay.nl
+In order to use this SDK, you'll need to have an iDIN account at Pay.nl
 
-The iDin will be able to manage sub-merchants, and manage most of the task via the api that normally a merchant would do by logging in in the pay.nl admin.
+The iDIN will be able to manage sub-merchants, and manage most of the task via the api that normally a merchant would do by logging in in the pay.nl admin.
 
 Also this SDK extends the standard [Pay.nl SDK](https://github.com/paynl/sdk), so all functions from the original SDK are also available.
 
@@ -28,9 +28,9 @@ Composer is a tool for dependency management in PHP. It allows you to declare th
 
 For more information on how to use/install composer, please visit: [https://github.com/composer/composer](https://github.com/composer/composer)
 
-To install the Pay.nl PHP SDK-iDin into your project, simply
+To install the Pay.nl PHP SDK-iDIN into your project, simply
 
-	$ composer require paynl/sdk-iDin
+	$ composer require paynl/sdk-idin
 
 
 ### Installation without composer 
@@ -62,7 +62,7 @@ Now you're ready to make some calls
 
 ### Examples
 
-The full list of functions can be found in the [samples](https://github.com/paynl/sdk-iDin/tree/master/samples) folder.
+The full list of functions can be found in the [samples](https://github.com/paynl/sdk-iDIN/tree/master/samples) folder.
 
 
 

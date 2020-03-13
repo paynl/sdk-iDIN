@@ -1,6 +1,6 @@
 {
   "name": "paynl/sdk-idin",
-  "description": "SDK specifically for idins to manage sub merchants",
+  "description": "SDK specifically for idin",
   "minimum-stability": "stable",
   "authors": [
     {
