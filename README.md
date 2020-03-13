@@ -1,4 +1,4 @@
-# Paynl PHP SDK-Idin
+# Paynl PHP SDK-iDIN
 
 ---
 
