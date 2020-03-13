@@ -1,0 +1,19 @@
+{
+  "name": "paynl/sdk-idin",
+  "description": "SDK specifically for idins to manage sub merchants",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Andy Pieters",
+      "email": "andy@pay.nl"
+    }
+  ],
+  "require": {
+    "paynl/sdk": ">1.2"
+  },
+  "autoload":{
+    "psr-4": {
+      "Paynl\\Idin\\": "src/"
+    }
+  }
+}
