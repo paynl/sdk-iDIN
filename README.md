@@ -60,6 +60,7 @@ To let the SDK know what your APItoken is, you'll have to register the TokenCode
 Now you're ready to make some calls
 
 
+
 ### Examples
 
 The full list of functions can be found in the [samples](https://github.com/paynl/sdk-iDIN/tree/master/samples) folder.
