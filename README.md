@@ -1,4 +1,4 @@
-# Paynl PHP SDK-iDIN
+# PAY. PHP SDK-iDIN
 
 ---
 
@@ -14,11 +14,9 @@
 ---
 
 ### About
-In order to use this SDK, you'll need to have an iDIN account at Pay.nl
+In order to use this SDK, you'll need to have iDIN enabled for your PAY. account.
 
-The iDIN will be able to manage sub-merchants, and manage most of the task via the api that normally a merchant would do by logging in in the pay.nl admin.
-
-Also this SDK extends the standard [Pay.nl SDK](https://github.com/paynl/sdk), so all functions from the original SDK are also available.
+This SDK extends the standard [PAY. SDK](https://github.com/paynl/sdk), so all functions from the original SDK are also available.
 
 ### Installation
 
@@ -28,7 +26,7 @@ Composer is a tool for dependency management in PHP. It allows you to declare th
 
 For more information on how to use/install composer, please visit: [https://github.com/composer/composer](https://github.com/composer/composer)
 
-To install the Pay.nl PHP SDK-iDIN into your project, simply
+To install the PAY. PHP SDK-iDIN into your project, simply
 
 	$ composer require paynl/sdk-idin
 
@@ -37,8 +35,8 @@ To install the Pay.nl PHP SDK-iDIN into your project, simply
 Coming soon..
 
 ### Setting up
-To communicate with the API of Pay.nl, you'll need to authenticate.
-Pay.nl uses a token to authenticate you. You can find your token in the pay.nl admin. On the bottom of the [API Tokens](https://admin.pay.nl/company/tokens) page.
+To communicate with the API of PAY, you'll need to authenticate.
+PAY. uses a token to authenticate you. You can find your token in the PAY.admin. On the bottom of the [API Tokens](https://admin.pay.nl/company/tokens) page.
 
 ##### Step 1 the autoloader
 Composer generates an autoloader for your application.
@@ -50,7 +48,7 @@ require_once('path_to/vendor/autoload.php');
 ```
 
 ##### Step 2 Your APItoken
-To let the SDK know what your APItoken is, you'll have to register the TokenCode (AT-code belonging to the token) and APItoken as follows:
+To let the SDK know what your API token is, you'll have to register the TokenCode (AT-code belonging to the token) and API token as follows:
 
 ```php
 \Paynl\Config::setTokenCode('AT-....-....');
