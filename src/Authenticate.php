@@ -8,11 +8,15 @@
 
 namespace Paynl\Idin;
 
-
 use Paynl\Error\Required;
+use Paynl\Config;
 
 class Authenticate
 {
+
+    protected $apiTokenRequired = true;
+    protected $serviceIdRequired = true;
+
     /**    
      * Options array    
      * token - Token with iDIN rights
@@ -27,21 +31,12 @@ class Authenticate
      * @param array $options See above
      * @throws Required
      */
-    public static function get($options = array()){
+    public static function start($options = array()){
         $api = new Api\Authenticate();
-
-        if(empty($options['token'])){
-            throw new Required('token');
-        } else {
-            $api->setToken($options['token']);
-        }    
         
-        if(empty($options['serviceId'])){
-            throw new Required('serviceId');
-        } else {
-            $api->setServiceId($options['serviceId']);
-        } 
-
+        $api->setToken(Config::getTokenCode());        
+        $api->setServiceId(Config::getServiceId());
+        
         if(empty($options['reference'])){
             throw new Required('reference');
         } else {

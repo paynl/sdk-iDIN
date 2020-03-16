@@ -5,9 +5,7 @@ require_once 'config.php';
 
 try {
     $result = Paynl\Idin\Authenticate::get(array(
-        // Required
-        'token' => '123456789012345678901234567890', 
-        'serviceId' => 'SL-1234-5678', 
+        // Required     
         'reference' => 'MER.REF.1234.5678', 
         'issuerId' => 'ABNANL2A',
         'data' => array(

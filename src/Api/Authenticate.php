@@ -10,9 +10,13 @@ namespace Paynl\Idin\Api;
 
 
 use Paynl\Error\Required;
+use Paynl\Config;
 
 class Authenticate extends Api
 {
+
+    protected $apiTokenRequired = true;
+    protected $serviceIdRequired = true;
 
     /**
      * @var string Token with iDIN rights
@@ -106,17 +110,9 @@ class Authenticate extends Api
 
     protected function getData()
     {
-        if(empty($this->token)){
-            throw new Required('token');
-        } else {
-            $this->data['token'] = $this->token;
-        }
-
-        if(empty($this->serviceId)){
-            throw new Required('serviceId');
-        } else {
-            $this->data['serviceId'] = $this->serviceId;
-        }
+        
+        $this->data['token'] = Config::getTokenCode();  
+        $this->data['serviceId'] = Config::getServiceId();        
 
         if(empty($this->reference)){
             throw new Required('reference');
