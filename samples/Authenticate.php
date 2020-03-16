@@ -4,7 +4,7 @@ require_once 'config.php';
 
 
 try {
-    $result = Paynl\Idin\Authenticate::get(array(
+    $result = Paynl\Idin\Authenticate::start(array(
         // Required     
         'reference' => 'MER.REF.1234.5678', 
         'issuerId' => 'ABNANL2A',
@@ -25,3 +25,4 @@ try {
 } catch (\Exception $e){
     echo "Error occurred: ".$e->getMessage();
 }
+
