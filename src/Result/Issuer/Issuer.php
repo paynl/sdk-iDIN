@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: PAY.
- * Date: 13-1-2016
- * Time: 19:01
- */
 
 namespace Paynl\Idin\Result\Issuer;
-
 
 use Paynl\Result\Result;
 

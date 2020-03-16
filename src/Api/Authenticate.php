@@ -1,20 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: PAY.
- * Date: 13-1-2016
- * Time: 19:34
- */
 
 namespace Paynl\Idin\Api;
-
 
 use Paynl\Error\Required;
 use Paynl\Config;
 
 class Authenticate extends Api
 {
-
     protected $apiTokenRequired = true;
     protected $serviceIdRequired = true;
 
@@ -116,21 +108,21 @@ class Authenticate extends Api
 
         if(empty($this->reference)){
             throw new Required('reference');
-        } else {
-            $this->data['reference'] = $this->reference;
-        }
+        } 
+        $this->data['reference'] = $this->reference;
+        
 
         if(empty($this->issuerId)){
             throw new Required('issuerId');
-        } else {
-            $this->data['issuerId'] = $this->issuerId;
-        }
+        } 
+        $this->data['issuerId'] = $this->issuerId;
+        
 
         if(empty($this->data)){
             throw new Required('data');
-        } else {
-            $this->data['data'] = $this->data;
-        }
+        } 
+        $this->data['data'] = $this->data;
+        
 
         if(isset($this->language)){
             $this->data['language'] = $this->language;
@@ -138,9 +130,9 @@ class Authenticate extends Api
 
         if(empty($this->returnUrl)){
             throw new Required('returnUrl');
-        } else {
-            $this->data['returnUrl'] = $this->returnUrl;
-        }
+        } 
+        $this->data['returnUrl'] = $this->returnUrl;
+        
 
         if(isset($this->exchangeUrl)){
             $this->data['exchangeUrl'] = $this->exchangeUrl;

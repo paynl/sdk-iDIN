@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: PAY.
- * Date: 13-1-2016
- * Time: 16:45
- */
 
 namespace Paynl\Idin\Result\Status;
 

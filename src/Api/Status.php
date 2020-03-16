@@ -1,19 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: PAY.
- * Date: 13-1-2016
- * Time: 19:34
- */
 
 namespace Paynl\Idin\Api;
 
-
 use Paynl\Error\Required;
-
+use Paynl\Config;
 class Status extends Api
 {    
-
     /**
      * @var string Token with iDIN rights
      */
@@ -41,17 +33,12 @@ class Status extends Api
     
     protected function getData()
     {
-        if(empty($this->token)){
-            throw new Required('token');
-        } else {
-            $this->data['token'] = $this->token;
-        }
+        $this->data['token'] = Config::getTokenCode();
 
         if(empty($this->trxid)){
             throw new Required('trxid');
-        } else {
-            $this->data['trxid'] = $this->trxid;
-        }        
+        } 
+        $this->data['trxid'] = $this->trxid;             
 
         return parent::getData();
     }

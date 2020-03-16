@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: PAY.
- * Date: 13-1-2016
- * Time: 17:50
- */
 
 namespace Paynl\Idin\Api;
-
 
 use Paynl\Error;
 use Paynl\Helper;

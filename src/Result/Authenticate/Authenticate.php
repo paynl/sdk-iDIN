@@ -1,16 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: PAY.
- * Date: 13-1-2016
- * Time: 19:01
- */
 
 namespace Paynl\Idin\Result\Authenticate;
 
-
 use Paynl\Result\Result;
-
 class Authenticate extends Result
 {
     public function getRequest()
@@ -23,7 +15,7 @@ class Authenticate extends Result
         return $this->data['trxid'];
     }
 
-    public function getEc()
+    public function getEntranceCode()
     {
         return $this->data['ec'];
     }  

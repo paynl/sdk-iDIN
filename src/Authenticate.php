@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: PAY.
- * Date: 4-3-2016
- * Time: 16:20
- */
 
 namespace Paynl\Idin;
 
@@ -13,14 +7,11 @@ use Paynl\Config;
 
 class Authenticate
 {
-
     protected $apiTokenRequired = true;
     protected $serviceIdRequired = true;
 
     /**    
-     * Options array    
-     * token - Token with iDIN rights
-     * serviceId - Service ID
+     * Options array   
      * reference - Merchant's unique transaction identifier
      * issuerId - Unique ID of the issuer (see issuer list)
      * data - Array of the requested consumer attributes. Possible values: 0 = do not include data, 1 = request this data consumer
@@ -39,15 +30,14 @@ class Authenticate
         
         if(empty($options['reference'])){
             throw new Required('reference');
-        } else {
-            $api->setReference($options['reference']);
         } 
+        $api->setReference($options['reference']);
+        
 
         if(empty($options['issuerId'])){
             throw new Required('issuerId');
-        } else {
-            $api->setIssuerId($options['issuerId']);
-        } 
+        }
+        $api->setIssuerId($options['issuerId']);        
 
         //Default data array
         $data_array = array(
@@ -76,9 +66,9 @@ class Authenticate
 
         if(empty($options['returnUrl'])){
             throw new Required('returnUrl');
-        } else {
-            $api->setReturnUrl($options['returnUrl']);
-        } 
+        }
+        $api->setReturnUrl($options['returnUrl']);
+        
 
         if (isset($options['exchangeUrl'])) {
             $api->setExchangeUrl($options['exchangeUrl']);
