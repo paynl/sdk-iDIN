@@ -9,7 +9,9 @@
 	- [1. The autoloader](#step-1-the-autoloader)  
 	- [2. Your API token](#step-2-your-apitoken)
 - [Examples](#examples)
-
+	- [1. getIssuers](#getissuers)  
+	- [2. Authenticate](#authenticate)	
+	- [3. Status](#status)
 
 ---
 
@@ -62,6 +64,25 @@ Now you're ready to make some calls
 ### Examples
 
 The full list of functions can be found in the [samples](https://github.com/paynl/sdk-iDIN/tree/master/samples) folder.
+
+##### getIssuers
+Gets an array with issuers
+
+##### Authenticate
+Starts an iDIN transaction based on issuer and merchant reference.
+
+##### Status
+Get the current status of an iDIN transaction
+possible statuses:
+- Init: The request is created; no iDIN status available (yet);
+- Open: Final result not yet known;
+- Pending: Transaction has not yet been completed;
+- Success: Positive result; the transaction is or has been executed;
+- Cancelled: Negative result due to cancellation by Consumer; the transaction will not be executed;
+- Expired: Negative result due to expiration of the transaction; the transaction will not be executed;
+- Failure: Negative result due to other reasons; the transaction will not be executed;
+- Error: Error message received from issuer;
+
 
 
 

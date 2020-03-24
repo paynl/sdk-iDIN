@@ -22,6 +22,20 @@ try {
         'returnUrl' => 'https://www.pay.nl',
         'exchangeUrl' => 'https://www.pay.nl'        
     ));
+
+    /**
+    *   GETTERS
+    *
+    *   getRequest() @var array
+    *   hasResults() @var bool
+    *   getErrorCode() @var string
+    *   getErrorMessage() @var string
+    *   getTrxid() @var string
+    *   getEntranceCode() @var string
+    *   getIssuerUrl() @var string
+    *   getData() @var array
+    */ 
+
 } catch (\Exception $e){
     echo "Error occurred: ".$e->getMessage();
 }
