@@ -15,8 +15,7 @@ try {
             'dateOfBirth' => '1',
             'gender' => '1',
             'email' => '1',
-            'phone' => '1',
-            'iban' => '1'
+            'phone' => '1'
         ),
         'language' => 'nl',
         'returnUrl' => 'https://www.pay.nl',

@@ -47,8 +47,7 @@ class Authenticate
             'dateOfBirth' => '0',
             'gender' => '0',
             'email' => '0',
-            'phone' => '0',
-            'iban' => '0'
+            'phone' => '0'
         );
 
         if(isset($options['data']) && is_array($options['data'])){
