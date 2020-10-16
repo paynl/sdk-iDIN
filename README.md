@@ -74,6 +74,25 @@ var_dump($issuers);
 
 ##### Authenticate
 Starts an iDIN transaction based on issuer and merchant reference.
+```php
+    $result = Paynl\Idin\Authenticate::start(array(
+    // Required     
+    'reference' => 'MER.REF.1234.5678', 
+    'issuerId' => 'ABNANL2A',
+    'data' => array(
+        'name' => '1',
+        'address' => '1',
+        'isEighteen' => '1',
+        'dateOfBirth' => '1',
+        'gender' => '1',
+        'email' => '1',
+        'phone' => '1'
+    ),
+    'language' => 'nl',
+    'returnUrl' => 'https://www.pay.nl',
+    'exchangeUrl' => 'https://www.pay.nl'        
+));
+```
 
 ##### Status
 Get the current status of an iDIN transaction
@@ -86,7 +105,12 @@ possible statuses:
 - Expired: Negative result due to expiration of the transaction; the transaction will not be executed;
 - Failure: Negative result due to other reasons; the transaction will not be executed;
 - Error: Error message received from issuer;
-
+```php
+$result = Paynl\Idin\Status::get(array(
+    // Required      
+    'trxid' => 'DA-1234-5678-9012'       
+));
+```
 
 
 
