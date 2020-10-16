@@ -67,6 +67,10 @@ The full list of functions can be found in the [samples](https://github.com/payn
 
 ##### getIssuers
 Gets an array with issuers
+```php
+$issuers = Paynl\Idin\Issuers::get();
+var_dump($issuers);
+```
 
 ##### Authenticate
 Starts an iDIN transaction based on issuer and merchant reference.
