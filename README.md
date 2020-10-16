@@ -75,7 +75,7 @@ var_dump($issuers);
 ##### Authenticate
 Starts an iDIN transaction based on issuer and merchant reference.
 ```php
-    $result = Paynl\Idin\Authenticate::start(array(
+$result = Paynl\Idin\Authenticate::start(array(
     // Required     
     'reference' => 'MER.REF.1234.5678', 
     'issuerId' => 'ABNANL2A',
